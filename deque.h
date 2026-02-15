@@ -168,7 +168,7 @@ void Deque<T>::pop_front(){
     if(m_coord_first.offset == CHUNK_SIZE-1){
         delete []m_map[m_coord_first.node_index];
         m_map[m_coord_first.node_index] = nullptr;
-        m_coord_first.node_index++;
+    m_coord_first.node_index++;
         m_coord_first.offset = 0;
     }else m_coord_first.offset++;
 }
